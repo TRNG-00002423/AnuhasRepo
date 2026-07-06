@@ -1,0 +1,55 @@
+"""
+inventory_hierarchy.mermaid : 
+Involves :
+-Inventory Class — Product Inventory System
+-Implement the Inventory class using lists, sets, deque, and comprehension-powered query methods.
+"""
+
+
+
+
+classDiagram
+    class Inventory {
+   
+
+
+        %% TODO: Add instance attributes
+	
+        products(dict)
+        categories(set)
+        history(deque)
+        _next_id(int)
+
+
+
+        %% TODO: Add methods
+
+        def __init__(self, products, categories, history, _next_id)
+
+        def add_product(self, product: Product) -> int
+
+        def remove_product(self, product_id: int) -> Product
+
+        def get_product(self, product_id: int) -> Product
+
+        def sell_product(self, product_id: int, quantity: int) -> Product
+
+        def restock(self, product_id: int, quantity: int) -> None
+
+        def search(self, keyword: str) -> list[Product]
+
+        def by_category(self, category: str) -> list[Product]
+
+        def in_stock(self) -> list[Product]
+
+        def price_range(self, min_price: float, max_price: float) -> list[Product]
+
+        def summary(self) -> dict
+
+        def __len__(self) -> int
+
+        def __repr__(self) -> str
+
+
+    """
+    }
