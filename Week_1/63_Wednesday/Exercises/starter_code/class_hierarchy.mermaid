@@ -1,0 +1,94 @@
+"""
+class_hierarchy.mermaid : 
+Involves :
+- 
+"""
+
+
+# TODO 1 : 
+
+classDiagram
+    class TestCase {
+        
+
+        %% TODO: Add class attributes
+
+        total_created (int)
+
+
+
+        %% TODO: Add instance attributes
+
+        name (str)
+        description (str)
+        priority (str)
+        tags (list)
+
+
+
+        %% TODO: Add methods
+
+        def __init__(self, name, description, priority : "medium", tags : [])
+
+        def run(self)
+
+        @classmethod
+        def from_dict(cls, data)
+
+        @staticmethod
+        def is_valid_name(name):
+
+
+    """
+    }
+
+    class TestResult {
+
+
+        %% TODO: Add attributes
+
+        test_name (str)
+        status (str)
+        duration_ms (float)
+        error_message (str or None)
+
+
+        %% TODO: Add methods
+
+        def __init__(self, test_name, status, duration_ms, error_message=None)
+
+        def summary(self)
+
+
+    }
+
+    class TestSuite {
+
+
+        %% TODO: Add attributes
+        
+        name (str)
+        tests (list)
+        
+
+        %% TODO: Add methods
+
+        def __init__(self, name, tests=None)
+
+        def add_test(test)
+
+        def remove_test(name):
+
+        def get_by_priority(priority)
+
+        def count():
+
+
+
+    }
+
+    class TestRunner {
+        %% TODO: Add methods
+    }
+
+    %% TODO: Define relationships between classes
