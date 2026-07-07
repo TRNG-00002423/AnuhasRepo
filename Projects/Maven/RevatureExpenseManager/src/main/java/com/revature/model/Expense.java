@@ -14,7 +14,7 @@ public class Expense {
     }
 
     public Expense(String expenseId, String userId, float amount, String description, String date, String category) {
-        this.expenseId = nextid;
+        this.expenseId = Integer.toString(nextId);
         this.userId = userId;
         this.amount = amount;
         this.description = description;

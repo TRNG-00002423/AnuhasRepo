@@ -42,8 +42,18 @@ public class UserService {
         }
     }
 
-    public User getUserById(int id) throws SQLException {
+    public User getUserById(String id) throws SQLException {
         User user = userDao.getUserById(id); // null if user does not exist
+
+        if (user == null) {
+            throw new UserNotFoundException("User with id " + id + " was not found");
+        } else {
+            return user;
+        }
+    }
+
+    public User findByEmail(String email) throws SQLException {
+        User user = userDao.getUserByEmail(email); // null if user does not exist
 
         if (user == null) {
             throw new UserNotFoundException("User with id " + id + " was not found");

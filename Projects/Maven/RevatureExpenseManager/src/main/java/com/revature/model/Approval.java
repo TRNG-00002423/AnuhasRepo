@@ -1,6 +1,6 @@
 package com.revature.model;
 
-public class Approvals {
+public class Approval {
 
     int nextId;
     private String approvalId;
@@ -11,12 +11,12 @@ public class Approvals {
     private String review_date;
 
     
-    public Approvals() {
+    public Approval() {
     }
 
 
-    public Approvals(String approvalId, String expenseId, String status, String reviewer, String comment, String review_date) {
-        this.approvalId = nextId;
+    public Approval(String approvalId, String expenseId, String status, String reviewer, String comment, String review_date) {
+        this.approvalId = Integer.toString(nextId);
         this.expenseId = expenseId;
         this.status = status;
         this.reviewer = reviewer;

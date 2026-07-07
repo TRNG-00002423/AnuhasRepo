@@ -42,8 +42,8 @@ public class ExpenseService {
         }
     }
 
-    public Expense getExpenseById(int id) throws SQLException {
-        Expense user = expenseDao.getUserById(id); // null if user does not exist
+    public Expense getExpenseById(String id) throws SQLException {
+        Expense expense = expenseDao.getExpenseById(id); // null if user does not exist
 
         if (expense == null) {
             throw new UserNotFoundException("User with id " + id + " was not found");
