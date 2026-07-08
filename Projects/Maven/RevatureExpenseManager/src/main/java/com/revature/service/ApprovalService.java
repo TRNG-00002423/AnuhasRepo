@@ -8,50 +8,118 @@ import com.revature.model.Expense;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ApprovalService {
+public class ApprovalService {    
+        
+    private ApprovalRepository approvalRepository;
 
-    private ApprovalDao approvalDao = new ApprovalDao();
-
-    public List<Approval> getAllExpenses() throws SQLException {
-        return approvalDao.getAllUsers();
+    public ApprovalService(ApprovalRepository approvalRepository) {
+        this.approvalRepository = approvalRepository;
     }
 
-    public void addApproval(Approval approval) throws SQLException {
-
-        approval.setUser_id(approval.getUser_id().strip());
-        approval.setAmount(expense.getAmount().strip());
-        approval.setDescription(expense.getDescription().strip());
-        approval.setDate(expense.getDate().strip());
-        approval.setCategory(expense.getCategory().strip());
-
-        if (approval.getEmail().length() == 0) {
-            throw new IllegalArgumentException("Email cannot be blank");
+    public Approval persistApproval(Approval approval) {  
+            
+        String currentApprovalExpenseId = approval.getExpenseId();
+        String currentApprovalStatus = approval.getStatus();
+        String currentApprovalReviewer = approval.getReviewer();
+        String currentApprovalComment = approval.getComment();
+             
+        if ((currentApprovalExpenseId != null) && (currentApprovalExpenseId != "") && (currentApprovalExpenseId != " ")) {
+            if ((currentApprovalStatus != null) && (currentApprovalStatus != "") && (currentApprovalStatus != " ")) {
+                if ((currentApprovalReviewer != null) && (currentApprovalReviewer != "") && (currentApprovalReviewer != " ")) {
+                    if ((currentApprovalComment != null) && (currentApprovalComment != "") && (currentApprovalComment != " ")) {
+                        
+                        if (currentApprovalComment.length() <= 255) {
+                            String currentApprovalReviewDate = approval.getReview_date();
+                            User postingUser = userService.getExistingUserById(currentApprovalReviewer);
+                            User isValidUser = userService.isValidUser(postingUser);
+                            Expense refrencedExpense = expenseService.getExistingExpenseById(currentApprovalExpenseId);
+                            Expense isValidExpense = expenseService.isValidUser(refrencedExpense);
+                            return expenseRepository.save(expense);
+                        }
+                    }
+                }
+            }
         }
 
-        if (approval.getPassword().length() == 0) {
-            throw new IllegalArgumentException("Password cannot be blank");
-        }
-
-        if (approval.getRole().length() == 0) {
-            throw new IllegalArgumentException("Role cannot be blank");
-        }
-
-        int recordsAdded = approvalDao.addUser(approval); 
-
-        if (recordsAdded != 1) { 
-            throw new UserUnsuccessfullyAddedException("Expense could not be added");
-        }
+        return null;
     }
 
-    public Approval getExpenseById(String id) throws SQLException {
-        Approval approval = approvalDao.getApprovalById(id); // null if user does not exist
 
-        if (approval == null) {
-            throw new UserNotFoundException("User with id " + id + " was not found");
+
+    public List<Approval> getAllApprovals() {
+        return approvalRepository.findAll();
+    }
+    public Approval getApprovalById(String id) {
+        Optional<Approval> optionalApproval = approvalRepository.findById(id);
+        if (optionalApproval.isPresent()) {
+            return optionalApproval.get();
         } else {
-            return approval;
+            return null;
         }
     }
+
+    public List<Approval> getAllApprovalsByUserId(String userId) {
+        List<Approval> approvalsToBeReturned = approvalRepository.findAll();
+        List<Approval> filteredApprovalsToBeReturned = new ArrayList<>();
+        for(int i=0; i<approvalsToBeReturned.size(); i++) {
+            if(approvalsToBeReturned.get(i).getPostedBy() == postedBy) {
+                filteredApprovalsToBeReturned.add(approvalsToBeReturned.get(i));
+            }
+        }
+       
+        return filteredApprovalsToBeReturned;
+    }
+
+    public String updateExistingApproval(String Id, Expense expense) {
+        try {
+            
+            String currentApprovalExpenseId = approval.getExpenseId();
+            String currentApprovalStatus = approval.getStatus();
+            String currentApprovalReviewer = approval.getReviewer();
+            String currentApprovalComment = approval.getComment();
+                
+            if ((currentApprovalExpenseId != null) && (currentApprovalExpenseId != "") && (currentApprovalExpenseId != " ")) {
+                if ((currentApprovalStatus != null) && (currentApprovalStatus != "") && (currentApprovalStatus != " ")) {
+                    if ((currentApprovalReviewer != null) && (currentApprovalReviewer != "") && (currentApprovalReviewer != " ")) {
+                        if ((currentApprovalComment != null) && (currentApprovalComment != "") && (currentApprovalComment != " ")) {
+                            
+                            if (currentApprovalComment.length() <= 255) {
+                                String currentApprovalReviewDate = approval.getReview_date();
+                                User postingUser = userService.getExistingUserById(currentApprovalReviewer);
+                                User isValidUser = userService.isValidUser(postingUser);
+                                Expense refrencedExpense = expenseService.getExistingExpenseById(currentApprovalExpenseId);
+                                Expense isValidExpense = expenseService.isValidUser(refrencedExpense);
+                                return expenseRepository.save(expense);
+                                
+                
+                                Optional<Approval> existingApproval = approvalRepository.findById(Id);
+                                if(existingApproval.isPresent()) {
+                                    Expense approvalToBeUpdated = existingApproval.get();
+                                    // expenseToBeUpdated.setExpenseId(currentApprovalExpenseId);
+                                    // expenseToBeUpdated.setStatus(currentApprovalStatus);
+                                    // expenseToBeUpdated.setReviewer(currentApprovalReviewer);
+                                    // expenseToBeUpdated.setComment(currentApprovalComment);
+                                    // expenseToBeUpdated.setReview_date(currentApprovalReviewDate);
+                                    approvalRepository.save(approvalToBeUpdated);
+                                    return "1";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+                
+            return null;
+            
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+            
+            
+            
 
     
 }
+

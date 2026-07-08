@@ -16,7 +16,7 @@ public class ExpenseService {
         this.expenseRepository = expenseRepository;
     }
 
-    public Message persistExpense(Expense expense) {  
+    public Expense persistExpense(Expense expense) {  
         String currentExpenseUserId = expense.getUserId();
         String currentExpenseDescription = expense.getDescription();
         String currentExpenseDate = expense.getDate();
@@ -87,7 +87,7 @@ public class ExpenseService {
                                         // expenseToBeUpdated.setDescription(currentExpenseDescription);
                                         // expenseToBeUpdated.setDate(currentExpenseDate);
                                         // expenseToBeUpdated.setCategory(currentExpenseCategory);
-                                        messageRepository.save(expenseToBeUpdated);
+                                        expenseRepository.save(expenseToBeUpdated);
                                         return "1";
                                     }
                                 }
