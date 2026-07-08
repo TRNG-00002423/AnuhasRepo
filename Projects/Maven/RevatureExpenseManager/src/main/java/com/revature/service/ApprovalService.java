@@ -8,7 +8,7 @@ import com.revature.model.Expense;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ApprovalsService {
+public class ApprovalService {
 
     private ApprovalDao approvalDao = new ApprovalDao();
 
