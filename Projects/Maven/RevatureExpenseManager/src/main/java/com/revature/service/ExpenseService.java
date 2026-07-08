@@ -9,48 +9,104 @@ import java.util.List;
 
 public class ExpenseService {
 
-    private ExpenseDao expenseDao = new ExpenseDao();
+    
+    private ExpenseRepository expenseRepository;
 
-    public List<Expense> getAllExpenses() throws SQLException {
-        return expenseDao.getAllUsers();
+    public ExpenseService(ExpenseRepository expenseRepository) {
+        this.expenseRepository = expenseRepository;
     }
 
-    public void addExpense(Expense expense) throws SQLException {
+    public Message persistExpense(Expense expense) {  
+        String currentExpenseUserId = expense.getUserId();
+        String currentExpenseDescription = expense.getDescription();
+        String currentExpenseDate = expense.getDate();
+        String currentExpenseCategory = expense.getCategory();
 
-        expense.setUser_id(expense.getUser_id().strip());
-        expense.setAmount(expense.getAmount().strip());
-        expense.setDescription(expense.getDescription().strip());
-        expense.setDate(expense.getDate().strip());
-        expense.setCategory(expense.getCategory().strip());
-
-        if (expense.getEmail().length() == 0) {
-            throw new IllegalArgumentException("Email cannot be blank");
+        
+        if ((currentExpenseUserId != null) && (currentExpenseUserId != "") && (currentExpenseUserId != " ")) {
+                if ((currentExpenseDescription != null) && (currentExpenseDescription != "") && (currentExpenseDescription != " ")) {
+                    if ((currentExpenseDate != null) && (currentExpenseDate != "") && (currentExpenseDate != " ")) {
+                        if ((currentExpenseCategory != null) && (currentExpenseCategory != "") && (currentExpenseCategory != " ")) {
+                            
+                            
+                            if (currentExpenseDescription.length() <= 255) {
+                                
+                                float currentExpenseAmount = expense.getAmount();
+                                User postingUser = userService.getExistingUserById(currentExpenseUserId);
+                                User isValidUser = userService.isValidUser(postingUser);
+                                return expenseRepository.save(expense);
+                            }
         }
-
-        if (expense.getPassword().length() == 0) {
-            throw new IllegalArgumentException("Password cannot be blank");
-        }
-
-        if (expense.getRole().length() == 0) {
-            throw new IllegalArgumentException("Role cannot be blank");
-        }
-
-        int recordsAdded = expenseDao.addUser(expense); 
-
-        if (recordsAdded != 1) { 
-            throw new UserUnsuccessfullyAddedException("Expense could not be added");
-        }
+        return null;
     }
-
-    public Expense getExpenseById(String id) throws SQLException {
-        Expense expense = expenseDao.getExpenseById(id); // null if user does not exist
-
-        if (expense == null) {
-            throw new UserNotFoundException("User with id " + id + " was not found");
+    public List<Expense> getAllExpenses() {
+        return expenseRepository.findAll();
+    }
+    public Expense getExpenseById(String id) {
+        Optional<Expense> optionalExpense = expenseRepository.findById(id);
+        if (optionalExpense.isPresent()) {
+            return optionalExpense.get();
         } else {
-            return expense;
+            return null;
         }
     }
+    public List<Expense> getAllExpensesByUserId(String userId) {
+        List<Expense> expensesToBeReturned = expenseRepository.findAll();
+        List<Expense> filteredExpensesToBeReturned = new ArrayList<>();
+        for(int i=0; i<expensesToBeReturned.size(); i++) {
+            if(expensesToBeReturned.get(i).getPostedBy() == postedBy) {
+                filteredExpensesToBeReturned.add(expensesToBeReturned.get(i));
+            }
+        }
+       
+        return filteredExpensesToBeReturned;
+    }
+    public String updateExistingExpense(String Id, Expense expense) {
+        try {
+            String currentExpenseUserId = expense.getUserId();
+            String currentExpenseDescription = expense.getDescription();
+            String currentExpenseDate = expense.getDate();
+            String currentExpenseCategory = expense.getCategory();
+            if ((currentExpenseUserId != null) && (currentExpenseUserId != "") && (currentExpenseUserId != " ")) {
+                    if ((currentExpenseDescription != null) && (currentExpenseDescription != "") && (currentExpenseDescription != " ")) {
+                        if ((currentExpenseDate != null) && (currentExpenseDate != "") && (currentExpenseDate != " ")) {
+                            if ((currentExpenseCategory != null) && (currentExpenseCategory != "") && (currentExpenseCategory != " ")) {
+                                
+                                
+                                if ((currentExpenseDescription.length() <= 255)&& (currentExpenseDescription.length() > 0)) {
+                                    
+                                    float currentExpenseAmount = expense.getAmount();
+                                    User postingUser = userService.getExistingUserById(currentExpenseUserId);
+                                    User isValidUser = userService.isValidUser(postingUser);
+                
+                                    Optional<Expense> existingExpense = expenseRepository.findById(Id);
+                                    if(existingExpense.isPresent()) {
+                                        Expense expenseToBeUpdated = existingExpense.get();
+                                        // expenseToBeUpdated.setUserId(currentExpenseUserId);
+                                        // expenseToBeUpdated.setAmount(currentExpenseAmount);
+                                        // expenseToBeUpdated.setDescription(currentExpenseDescription);
+                                        // expenseToBeUpdated.setDate(currentExpenseDate);
+                                        // expenseToBeUpdated.setCategory(currentExpenseCategory);
+                                        messageRepository.save(expenseToBeUpdated);
+                                        return "1";
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+                
+                return null;
+            
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+            
+            
+            
 
     
 }
+
