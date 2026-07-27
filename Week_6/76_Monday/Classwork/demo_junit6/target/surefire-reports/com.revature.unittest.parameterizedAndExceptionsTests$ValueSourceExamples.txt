@@ -1,0 +1,235 @@
+-------------------------------------------------------------------------------
+Test set: com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 0.135 s <<< FAILURE! -- in com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.stringLength_variousStrings_calculated(String)[1] -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.stringLength_variousStrings_calculated(String)[2] -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.stringLength_variousStrings_calculated(String)[3] -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.stringLength_variousStrings_calculated(String)[4] -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[1] -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[2] -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[3] -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[4] -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[5] -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[6] -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
+com.revature.unittest.parameterizedAndExceptionsTests$ValueSourceExamples.isEven_evenNumbers_returnsTrue(int)[7] -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeaderName
+	Syntax error, insert "EnumBody" to complete ClassBodyDeclarations
+	Syntax error, insert ";" to complete BlockStatements
+	Syntax error, insert ";" to complete BlockStatements
+	The method assertThrows(Class<T>, Executable) in the type Assertions is not applicable for the arguments (Class<ArithmeticException>)
+	Syntax error on token ",", [ expected
+	The target type of this expression must be a functional interface
+	Syntax error, insert "]" to complete Expression
+	Syntax error, insert "AssignmentOperator Expression" to complete Expression
+	Syntax error, insert ";" to complete BlockStatements
+	ArithemticException cannot be resolved to a type
+	Syntax error on token "exception", delete this token
+	getMessage cannot be resolved or is not a field
+	The method assertDoesNotThrow(Executable) in the type Assertions is not applicable for the arguments ()
+	Syntax error on token "->", ; expected
+
+	at com.revature.unittest.parameterizedAndExceptionsTests.<init>(parameterizedAndExceptionsTests.java:139)
+
