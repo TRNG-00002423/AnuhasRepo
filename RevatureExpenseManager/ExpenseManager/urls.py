@@ -1,8 +1,37 @@
 from django.urls import path
-from . import views
+from ExpenseManager import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
+    path('home/', views.home, name="home"),
+    path('EmployeePortal/', views.EmployeePortal, name="EmployeePortal"),
+    path('EmployeePortal/register/', views.register, name="register"),
+    path('EmployeePortal/register/addUser/', views.addUser, name="addUser"),
+    path('EmployeePortal/EmployeeLogin/', views.EmployeeLogin, name="EmployeeLogin"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/', views.signInEmployee, name="signInEmployee"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/signInEmployee/', views.signInEmployee, name="signInEmployee"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/signInEmployee/signInEmployee/signInEmployee/', views.signInEmployee, name="signInEmployee"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewAllExpenses/', views.viewAllExpenses, name="viewAllExpenses"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewAllExpenses/addExpense/', views.addExpense, name="addExpense"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewAllExpenses/addExpense/add', views.add, name="add"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewExpenses/<int:id>/', views.viewExpenses, name="viewExpenses"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewExpenses/addExpense/', views.addExpense, name="addExpense"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewExpenses/addExpense/add/', views.add, name="add"),
+    path('EmployeePortal/EmployeeLogin/signInEmployee/viewAllApprovals/', views.viewAllApprovals, name="viewAllApprovals"),
+    path('EmployeePortal/ManagerLogin/', views.ManagerLogin, name="ManagerLogin"),
+    path('EmployeePortal/ManagerLogin/signInManager/', views.signInManager, name="signInManager"),
+    path('EmployeePortal/ManagerLogin/signInManager/signInManager/', views.signInManager, name="signInManager"),
+    path('EmployeePortal/ManagerLogin/signInManager/signInManager/signInManager/', views.signInManager, name="signInManager"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewAllExpenses/', views.viewAllExpenses, name="viewAllExpenses"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewAllExpenses/addExpense/', views.addExpense, name="addExpense"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewAllExpenses/addExpense/add', views.add, name="add"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewExpenses/<int:id>/', views.viewExpenses, name="viewExpenses"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewExpenses/<int:id>/addExpense/', views.addExpense_id, name="addExpense_id"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewExpenses/<int:id>/addExpense/add', views.add_id, name="add_id"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewExpenses/addExpense/', views.addExpense, name="addExpense"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewExpenses/addExpense/add/', views.add, name="add"),
+    path('EmployeePortal/ManagerLogin/signInManager/viewAllApprovals/', views.viewAllApprovals, name="viewAllApprovals"),
     path('', views.index, name="index"),
     path('viewExpenses/<int:id>', views.viewExpenses, name='viewExpenses'),
     path('viewAllExpenses/', views.viewAllExpenses, name='viewAllExpenses'),
@@ -13,5 +42,16 @@ urlpatterns = [
     path('viewAllExpenses/addExpense/add/', views.add, name='add'),
     path('viewExpenses/addExpense/', views.addExpense, name='addExpense'),
     path('viewExpenses/addExpense/add/', views.add, name='add'),
+    path('register/', views.register, name='register'),
+    path('register/addUser/', views.addUser, name='addUser'),
+    path('login/', views.login, name='login'),
+    path('login/signIn/', views.signIn, name='signIn'),
+    path('login/signIn/viewAllExpenses/', views.viewAllExpenses, name='viewAllExpenses'),
+    path('login/signIn/viewAllApprovals/', views.viewAllApprovals, name='viewAllApprovals'),
+    path('login/signIn/viewExpenses/<int:id>', views.viewExpenses, name='viewExpenses'),
+    path('login/signIn/viewExpenses/addExpense/', views.addExpense, name='addExpense'),
+    path('login/signIn/viewExpenses/addExpense/add/', views.add, name='add'),
 
 ]
+
+urlpatterns += staticfiles_urlpatterns()
